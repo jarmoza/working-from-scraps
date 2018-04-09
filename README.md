@@ -1,1 +1,1 @@
-[Working from Scraps Prototype](jarmoza.github.io/working-from-scraps)
+[Working from Scraps Prototype](https://jarmoza.github.io/working-from-scraps/)
