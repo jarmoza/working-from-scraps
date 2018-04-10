@@ -7,14 +7,14 @@ const app = express();
 
 // Create middleware to handle the serving the app
 // app.use("/", serveStatic ( path.join (__dirname, "/dist") ) )
-app.use("/", serveStatic ( path.join (__dirname, "") ) );
+app.use("/", serveStatic ( path.join (__dirname, "/") ) );
 
 // Catch all routes and redirect to the index file
 // app.get("*", function (req, res) {
 //     res.sendFile(__dirname + "/dist/index.html")
 // })
 app.get("*", function (req, res) {
-    res.sendFile(__dirname + "index.html")
+    res.sendFile(__dirname + "/index.html")
 });
 
 // Create default port to serve the app on
