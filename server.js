@@ -6,12 +6,20 @@ const path = require("path");
 const app = express();
 
 // Create middleware to handle the serving the app
-app.use("/", serveStatic ( path.join (__dirname, "/dist") ) )
+app.use("/", serveStatic ( path.join (__dirname, "/dist") ) );
 // app.use("/", serveStatic ( path.join (__dirname, "/") ) );
+
+app.get("*.js", function(req, res) {
+	res.sendFile(__dirname + "/dist/build.js")
+});
+
+app.get("*.js.map", function(req, res) {
+	res.sendFile(__dirname + "/dist/build.js.map")
+});
 
 // Catch all routes and redirect to the index file
 app.get("*", function (req, res) {
-    res.sendFile(__dirname + "/dist/index.html")
+    res.sendFile(__dirname + "/dist/index.html");
 })
 // app.get("*", function (req, res) {
 //     res.sendFile(__dirname + "/index.html")
