@@ -1,6 +1,7 @@
 const express = require("express");
 const serveStatic = require("serve-static");
 const path = require("path");
+//const nodeExternals = require('webpack-node-externals');
 
 // Create the express app
 const app = express();
