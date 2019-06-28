@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
 
-  entry: './src/main.js',
+  entry: './server.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -85,6 +85,7 @@ module.exports = {
     noInfo: true,
     overlay: true
   },
+  node: { fs: 'empty', net: 'empty' },
   performance: {
     hints: false
   },
