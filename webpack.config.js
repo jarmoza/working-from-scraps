@@ -85,6 +85,7 @@ module.exports = {
     noInfo: true,
     overlay: true
   },
+  node: { fs: 'empty' },
   performance: {
     hints: false
   },
