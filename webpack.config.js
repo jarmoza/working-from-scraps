@@ -1,9 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
 
-  entry: './server.js',
+  entry: './build.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
